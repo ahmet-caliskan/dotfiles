@@ -1,0 +1,24 @@
+# Increase volume
+"amixer set Master 5%+"
+    m:0x0 + c:123
+    XF86AudioRaiseVolume
+
+
+# Decrease volume
+"amixer set Master 5%-"
+    m:0x0 + c:122
+    XF86AudioLowerVolume
+
+# Mute microphone
+"pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+    m:0x0 + c:198
+    XF86AudioMicMute
+
+"xbacklight -dec 10"
+    m:0x0 + c:232
+    XF86MonBrightnessDown
+
+"xbacklight -inc 10"
+    m:0x0 + c:233
+    XF86MonBrightnessUp
+
