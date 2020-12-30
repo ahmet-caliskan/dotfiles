@@ -9,7 +9,7 @@
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 
 let $vimhome=fnamemodify(resolve(expand("~/.vimrc")), ':p:h')
-let $vundle=$vimhome."/bundle/Vundle.vim"
+let $vundle="~/.vim/bundle/Vundle.vim"
 
 " Be iMproved
 set nocompatible
@@ -27,7 +27,7 @@ call vundle#begin()
     Plugin 'scrooloose/nerdtree'                " Project and file navigation
     Plugin 'majutsushi/tagbar'                  " Class/module browser
     Plugin 'kien/ctrlp.vim'                     " Fast transitions on project files
-
+    "Plugin 'cjrh/vim-conda'                     "Conda environments for vim
     "-------------------=== Other ===-------------------------------
     Plugin 'bling/vim-airline'                  " Lean & mean status/tabline for vim
     Plugin 'vim-airline/vim-airline-themes'     " Themes for airline
@@ -50,7 +50,7 @@ call vundle#begin()
     "Plugin 'Valloric/YouCompleteMe'             " Autocomplete plugin
 
     "-------------------=== Python  ===-----------------------------
-    Plugin 'klen/python-mode'                   " Python mode (docs, refactor, lints...)
+    Plugin 'python-mode/python-mode'                   " Python mode (docs, refactor, lints...)
     Plugin 'scrooloose/syntastic'               " Syntax checking plugin for Vim
 
 call vundle#end()                           " required
@@ -64,7 +64,7 @@ filetype plugin indent on
 
 """""""""""" Start Powerline Settings """"""""""""""""
 
-set guifont=Inconsolata\ for\ Powerline:h15
+set guifont=Meslo\ LG:h15
 let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
 set t_Co=256
@@ -174,8 +174,8 @@ let g:riv_disable_folding=1
 set completeopt-=preview                    " remove omnicompletion dropdown
 
 " python executables for different plugins
-let g:pymode_python='python'
-let g:syntastic_python_python_exec='python'
+let g:pymode_python='python3'
+let g:syntastic_python_python_exec='python3'
 
 " rope
 let g:pymode_rope=0
@@ -250,7 +250,7 @@ let g:syntastic_error_symbol='X'
 let g:syntastic_style_error_symbol='X'
 let g:syntastic_warning_symbol='x'
 let g:syntastic_style_warning_symbol='x'
-let g:syntastic_python_checkers=['flake8', 'pydocstyle', 'python']
+let g:syntastic_python_checkers=['flake8', 'pydocstyle', 'python3']
 
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf='~/.vim/ycm_extra_conf.py'
